@@ -7,17 +7,36 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Calculator.h"
+@interface ClassA :NSObject
+{
+    int x;
+}
+-(void) initVar;
+@end
 
+@implementation ClassA
+-(void) initVar
+{
+    x = 100;
+}
+@end
+
+@interface ClassB : ClassA
+-(void)printVar;
+@end
+
+@implementation ClassB
+-(void) printVar
+{
+    NSLog(@"x=%i",x);
+}
+@end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Calculator *deskCalc = [[Calculator alloc] init];
-        
-        [deskCalc setAccumulator:100.0];
-        [deskCalc add:200.];
-        [deskCalc divide:15.0];
-        NSLog(@"The result is %g",[deskCalc accumulator]);
+        ClassB *b=[[ClassB alloc]init];
+        [b initVar];
+        [b printVar];
     }
     return 0;
 }
