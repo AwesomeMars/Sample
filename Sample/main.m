@@ -7,36 +7,58 @@
 // 소스 변경
 
 #import <Foundation/Foundation.h>
-@interface ClassA :NSObject
-{
-    int x;
-}
--(void) initVar;
+
+
+
+//#########
+//Shape
+@interface Shape : NSObject
+-(void)draw;
 @end
 
-@implementation ClassA
--(void) initVar
+@implementation Shape
+-(void)draw
 {
-    x = 100;
+    NSLog(@"공통 그리기 로직");
 }
 @end
 
-@interface ClassB : ClassA
--(void)printVar;
+//#########
+//Rectangle
+@interface Rectangle : NSObject
+-(void)drawRectangle;
 @end
 
-@implementation ClassB
--(void) printVar
+@implementation Rectangle
+-(void)drawRectangle
 {
-    NSLog(@"x=%i",x);
+    NSLog(@"공통 그리기 로직");
+    NSLog(@"사각형 그리기");
 }
 @end
+//########
+//Circle
+@interface Circle : NSObject
+-(void)draw;
+@end
+
+@implementation Circle
+-(void)draw;
+{
+    NSLog(@"공통 그리기 로직");
+    NSLog(@"원 그리기");
+}
+@end
+
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        ClassB *b=[[ClassB alloc]init];
-        [b initVar];
-        [b printVar];
+        Circle *circle = [[Circle alloc]init];
+        [circle draw];
+        
+        Rectangle *rectangle = [[Rectangle alloc]init];
+        [rectangle drawRectangle];
     }
     return 0;
 }
