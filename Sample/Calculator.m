@@ -30,19 +30,19 @@
 
 -(void)add:(double)value
 {
-    accumulator += accumulator;
+    accumulator += value;
     
 }
 
 -(void)subtract:(double)value
 {
-    accumulator -=accumulator;
+    accumulator -=value;
     
 }
 
 -(void)multiply:(double)value
 {
-    accumulator *= accumulator;
+    accumulator *= value;
 }
 
 -(void)divide:(double)value
