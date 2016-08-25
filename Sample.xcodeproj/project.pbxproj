@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE1A053C1D6C265800E21B18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A053B1D6C265800E21B18 /* main.m */; };
 		CE1A054D1D6C44CB00E21B18 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A054C1D6C44CB00E21B18 /* Calculator.m */; };
+		CE1A05951D6E6E0300E21B18 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A05941D6E6E0300E21B18 /* Engine.m */; };
+		CE1A05981D6E716000E21B18 /* Tire.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A05971D6E716000E21B18 /* Tire.m */; };
+		CE1A059B1D6E724700E21B18 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1A059A1D6E724700E21B18 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,12 @@
 		CE1A053B1D6C265800E21B18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE1A054B1D6C44CB00E21B18 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		CE1A054C1D6C44CB00E21B18 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		CE1A05931D6E6E0300E21B18 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		CE1A05941D6E6E0300E21B18 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
+		CE1A05961D6E716000E21B18 /* Tire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tire.h; sourceTree = "<group>"; };
+		CE1A05971D6E716000E21B18 /* Tire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tire.m; sourceTree = "<group>"; };
+		CE1A05991D6E724700E21B18 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		CE1A059A1D6E724700E21B18 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,12 @@
 				CE1A053B1D6C265800E21B18 /* main.m */,
 				CE1A054B1D6C44CB00E21B18 /* Calculator.h */,
 				CE1A054C1D6C44CB00E21B18 /* Calculator.m */,
+				CE1A05931D6E6E0300E21B18 /* Engine.h */,
+				CE1A05941D6E6E0300E21B18 /* Engine.m */,
+				CE1A05961D6E716000E21B18 /* Tire.h */,
+				CE1A05971D6E716000E21B18 /* Tire.m */,
+				CE1A05991D6E724700E21B18 /* Car.h */,
+				CE1A059A1D6E724700E21B18 /* Car.m */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -123,8 +138,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1A059B1D6E724700E21B18 /* Car.m in Sources */,
 				CE1A053C1D6C265800E21B18 /* main.m in Sources */,
+				CE1A05981D6E716000E21B18 /* Tire.m in Sources */,
 				CE1A054D1D6C44CB00E21B18 /* Calculator.m in Sources */,
+				CE1A05951D6E6E0300E21B18 /* Engine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +233,8 @@
 		CE1A05401D6C265800E21B18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -222,6 +242,10 @@
 		CE1A05411D6C265800E21B18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -245,6 +269,7 @@
 				CE1A05411D6C265800E21B18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
