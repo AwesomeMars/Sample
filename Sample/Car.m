@@ -15,6 +15,7 @@
     if(self){
         engine = [[Engine alloc]init];
         tire = [[Tire alloc]init];
+        tire.car = self;
     }
     return self;
 }
@@ -34,6 +35,7 @@
     [engine stopEngine];
     [tire stop];
 }
+
 -(void) setTire:(Tire *)newTire
 {
     if(tire)//기존 객체가 있으면 릴리즈

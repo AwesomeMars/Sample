@@ -11,7 +11,7 @@
 #import "Tire.h"
 
 
-@interface Car : NSObject
+@interface Car : NSObject <TireDelegate>
 {
     Engine *engine;
     Tire *tire;

@@ -15,10 +15,11 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"Name = %@", [engine name]); //%@는 객체 타입 출력시 사용
 
         Car *car = [[Car alloc] init];  //Car : 1
-   
-        Tire *newTire = [[Tire alloc] init]; //Tire : 1
-        [car setTire: newTire]; // Car : 1 Tire : 2
-        [newTire release]; //Car : 1 Tire : 1
+  
+// 새로 낀 타이어는 주석 처리 하고 타이어 구현 부분 재실행
+//        Tire *newTire = [[Tire alloc] init]; //Tire : 1
+//        [car setTire: newTire]; // Car : 1 Tire : 2
+//        [newTire release]; //Car : 1 Tire : 1
         
         [car runCar]; //Car : 1 Tire:1
         [car release]; //Car : 0 Tire : 0
